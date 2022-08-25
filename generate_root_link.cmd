@@ -1,1 +1,0 @@
-C:\SoftwareRepository\root_v6.24.00\bin\rootcint.exe C:/SoftwareRepository/UrmsMeasurementTest/ex2aDict.cxx -c -p C:/SoftwareRepository/UrmsMeasurementTest/main.h C:/SoftwareRepository/UrmsMeasurementTest/ex2aLinkDef.h

@@ -361,3 +361,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+generate_root_link.cmd
+ex2aLinkDef.h
+guils.c
+Makedict.bat

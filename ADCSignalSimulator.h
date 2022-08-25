@@ -40,23 +40,23 @@ public:
 	};
 
 private:
-	/* Параметры эмулируемого сигнала */
-	const double signalFreq = 50;				//частота сигнала, Гц
-	const double signalAmpl = 1000;				//амплитуда сигнала, в разрядах АЦП
-	const double signalOffset = 2048;			//смещение сигнала по оси Y, в разрядах АЦП
-	//параметры для отрисовки графиков
-	const int adcSampleTime = 100;				//время одной выборки АЦП, мкс
-	const int adcSamplesInXCell = 10;			//количество выборок АЦП в одной клетке по оси Х
-	const int adcMaxVal = 4096;					//максимальное значение АЦП
-	const int emulTime = 20000000;				//длительность эмуляции сигнала, мкс
-	const long long timeStepDivider = 1000000;	//делитель для определения шага времени квантования, 1 мкс = 1/1000000 с
-	const int timeForXAxis = 120000;			//длительность оси Х графика по времени, мкс (по достижении этого времени график стирается и рисуется заново,
-												//нулевая точка графика сдвигается)
-	const int adcMaxValDiv2 = static_cast<int>(signalOffset);	//максимальное значение АЦП / 2
-	const double signalFreqMin = 0.1;			//минимальная частота сигнала, допустимая при эмуляции
-	const double signalFreqMax = 250.0;			//максимальная частота сигнала, допустимая при эмуляции
-	const double signalAmplMin = 0.0;			//минимальная амплитуда сигнала, допустимая при эмуляции
-	const double signalAmplMax = 4096.0;		//максимальная амплитуда сигнала, допустимая при эмуляции
+	/* Parameters of signals */
+	const double signalFreq = 50;				//signal frequency, Hz
+	const double signalAmpl = 1000;				//signal amplitude, in ADC bits
+	const double signalOffset = 2048;			//signal shift along the Y axis, in ADC bits
+	/* and graphs */
+	const int adcSampleTime = 100;				//time of one ADC sample, µs
+	const int adcSamplesInXCell = 10;			//number of ADC samples in one cell along the X axis
+	const int adcMaxVal = 4096;					//maximum ADC value
+	const int emulTime = 20000000;				//signals emulation process duration, µs
+	const long long timeStepDivider = 1000000;	//divisor to determine the quantization time step, 1 µs = 1/1000000 s
+	const int timeForXAxis = 120000;			//the duration of the X-axis of the chart in time, µs (when this time is reached, the chart is erased and redrawn,
+												//the start(zero) point of the graph is shifted)
+	const int adcMaxValDiv2 = static_cast<int>(signalOffset);	//maximum value of ADC / 2
+	const double signalFreqMin = 0.1;			//minimum signal frequency allowed during emulation
+	const double signalFreqMax = 250.0;			//maximum signal frequency allowed during emulation
+	const double signalAmplMin = 0.0;			//minimum signal amplitude allowed during emulation
+	const double signalAmplMax = 4096.0;		//maximum signal amplitude allowed during emulation
 
 	//Main frame
 	std::unique_ptr<TGMainFrame> fMain = nullptr;

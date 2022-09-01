@@ -1,1 +1,1 @@
-root C:\SoftwareRepository\UrmsMeasurementTest\main.cpp
+root main.cpp
